@@ -1,9 +1,7 @@
 ﻿#include <windows.h>
 
-// Указываем линковщику искать функцию в LibB.lib
 #pragma comment(lib, "LinB.lib")
 
-// Импортируем из LibB
 extern "C" __declspec(dllimport) void __stdcall GetDataFromB(wchar_t* buffer);
 
 extern "C" __declspec(dllexport) int __stdcall CreateTestFile(const wchar_t* filePath) {
